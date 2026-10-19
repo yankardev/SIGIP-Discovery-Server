@@ -1,0 +1,28 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: sigip-discovery-server
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+info:
+  app:
+    name: SIGIP Discovery Server
+    description: Registro y descubrimiento de microservicios SIGIP
+    version: 0.0.1
