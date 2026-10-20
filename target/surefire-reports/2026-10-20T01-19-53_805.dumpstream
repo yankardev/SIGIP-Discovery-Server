@@ -1,0 +1,5 @@
+# Created at 2026-10-20T01:19:56.621
+Boot Manifest-JAR contains absolute paths in classpath 'D:\YANCARLOS\CIBERTEC-T\06- VI CUATRIMESTRE\MODULO 01\DES APP WEB II\PROYECTO\SIGIP\SIGIP-Discovery-Server\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
