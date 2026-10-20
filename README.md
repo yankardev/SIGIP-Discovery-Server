@@ -1,23 +1,17 @@
-# SIGIP Discovery Server
+# discovery-server
 
-Servidor de descubrimiento de servicios para SIGIP usando Spring Boot y Netflix Eureka.
+Servidor Eureka: registro y descubrimiento de servicios.
 
-## Requisitos
-- JDK 21 o superior
-- Maven 3.9 o superior
+## Funcionalidad
 
-## Ejecutar
+- Panel: http://localhost:8761
+- Cada servicio se registra con un `instance-id` aleatorio, así se pueden levantar varias instancias del mismo servicio.
+- En la nube (perfil `cloud`) no se usa: los servicios se ubican por variables de entorno.
+
+## Ejecución
+
+Puerto `8761`.
+
 ```bash
-mvn spring-boot:run
+mvn -pl backend/discovery-server -am spring-boot:run
 ```
-
-Con el servidor iniciado:
-- Panel Eureka: http://localhost:8761
-- Health: http://localhost:8761/actuator/health
-
-## Configuración
-- Puerto: 8761
-- Nombre: sigip-discovery-server
-- El servidor no se registra a sí mismo como cliente Eureka.
-
-Este repositorio contiene solo el servidor de descubrimiento. El API Gateway y los microservicios funcionales se mantienen en repositorios independientes.
